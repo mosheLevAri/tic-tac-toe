@@ -3,14 +3,22 @@ function player(name, img, ) {
         name,
         img
     }
-}
-let p1 = player("moshe", "x", );
-let p2 = player("avi", "o", )
+};
 
-let currentPlayer = p1;
+function submit() {
+    let p1Value =document.getElementById("p1").value
+    let p2Value =document.getElementById("p2").value
+    p1 =new player(p1Value,"x");
+    p2 = new player(p2Value, "o", ) 
+     currentPlayer = p1;  
+};
+
+let p1;
+let p2;
+let currentPlayer ;
 
 function turnPlayer() {
-    currentPlayer = (currentPlayer == p1) ? p2 : p1;
+    currentPlayer = (currentPlayer == p1) ? p2: p1;
 }
 let gameoverHTML =document.getElementsByClassName("win")
 let table = document.getElementById("table");
@@ -39,8 +47,12 @@ table.addEventListener("click", click);
 function click(event) {
     let target = event.target;
     let index = Number(target.id.slice(1))
+    if(p1===undefined||p2===undefined){
+        alert("put user Name ")
+        return
+    }
 
-    if (target.id === "table" || target.classList.contains("row") || item[index]) {
+    if (target.id === "table" || target.classList.contains("row") || item[index] ) {
         return
     }
 
@@ -98,7 +110,7 @@ function winning() {
     start();
     stop();  
         gameoverimg[0].classList.add("win");
-        gameoverimg[0].innerHTML=`<h1>${currentPlayer.name}</h1><h1>is the winner !!!</h1>`; 
+        gameoverimg[0].innerHTML=`<h2>${currentPlayer.name}</h2><h2>is the winner !!!</h2>`; 
 };
 
 function newGame() {
@@ -165,5 +177,6 @@ function loudLS() {
     }
     return
 };
+
 
 
