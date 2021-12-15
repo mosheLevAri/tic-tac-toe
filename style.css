@@ -1,38 +1,108 @@
 body {
-  background-color: bisque;
+  top: 0;
+  background: linear-gradient(to right, rgb(189, 195, 199), rgb(44, 62, 80));
+  zoom: 75%;
 }
 
-h2 {
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  border: 3px solid black;
+  background-color: khaki;
+  height: 67px;
+  width: 130px;
+  text-align: center;
+  font-size: x-large;
+  border-radius: 18%;
+  align-items: center;
+  margin-bottom: 0.5%;
+  cursor: pointer;
+
+}
+
+.icons:hover {
+  transform: translate3d(3px, 2px, 0);
+  opacity: 0.85;
+}
+
+
+.icons2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon {
+  background-color: darkkhaki;
+}
+
+.input {
+  background-color: khaki;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: cursive;
+}
+
+
+nav {
+  text-align: center;
+}
+
+i {
+  color: midnightblue;
+  background-color: khaki;
+}
+
+h1 {
   text-align: center;
   color: white;
   transition: 2s;
   text-shadow: 2px 1px 1px brown, 0 0 8px black, 0 0 4px black;
+  font-size: 7vh;
+  margin: 8px;
 }
 
-#table {
+/* #table {
   background-color: rgb(223, 230, 236);
-  margin-right: 15%;
-  margin-top: 15px;
-}
+} */
 
-#table div{  
-  width: 300px;
-  height: 100px;
-  margin: auto;
+.box {
+  width: 130px;
+  height: 125px;
+  margin: -1.4px;
   padding: auto;
   border: 2px solid black;
-  display: flex;
- 
+  display: inline-flex;
+  background: linear-gradient(to right, rgb(162, 183, 198), rgb(102, 95, 74));
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15%;
+  cursor: pointer;
+  
 }
 
-
+form {
+  display: inline-flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4px;
+  width: 35%;
+}
 
 .flex {
   display: flex;
-  justify-content: flex-end
+  justify-content: center;
+  margin-bottom: 15px;
+
 }
 
-#input {
+/* #input {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -40,37 +110,74 @@ h2 {
   width: 25%;
   align-items: stretch;
   justify-content: space-evenly
-}
+} */
 
 .button {
   background-color: rgb(189, 190, 212);
-  font-size: 21px
+  font-size: 21px;
+  cursor: pointer;
 }
 
 
 
-.x{
+.x {
   background-image: url("https://emojigraph.org/media/emojidex/cross-mark-button_274e.png");
   background-size: cover;
 }
-.o{
-  background-image: url( "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTVhoD3uUH9I5qsMCVhjIifpZbF5JPkXTc8g&usqp=CAU");
+
+.o {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTVhoD3uUH9I5qsMCVhjIifpZbF5JPkXTc8g&usqp=CAU");
   background-size: cover;
 }
 
-.win{
-  width: 300px;
-  height: 300px;
-  margin: auto;
+.win {
+  width: 600px;
+  height: 395px;
+  margin: -1.4px;
   padding: auto;
   border: 2px solid black;
-  background-color: dimgrey;
+  background-color: #a26e5a;
   text-align: center;
   color: white;
   text-shadow: 4px 1px 1px brown, 0 0 12px black, 0 0 4px black;
-  font-size: 25px;
+  font-size: 50px;
+  position: absolute;
 }
-.usersname{
-  display: flex;
-  justify-content: center;
+
+.username {
+  margin: 4px;
+  height: 25px;
+  border: 3px inset brown;
+  width: 30%;
+
+}
+
+#playbtm {
+  width: 109px;
+  height: 70px;
+  /* background: linear-gradient(to right, rgb(191, 195, 220), rgb(86, 110, 77)); */
+  border-radius: 20%;
+  background-color: khaki;
+  cursor: pointer;
+  pointer-events: auto;
+  font-size: 23px;
+  font-family: cursive;
+}
+
+#playbtm:hover {
+  transform: translate3d(3px, 2px, 0);
+  opacity: 0.85;
+}
+
+#p1 {
+  max-width: 30%;
+  font-size: 20px;
+  font-family: cursive;
+
+}
+
+#p2 {
+  font-size: 20px;
+  font-family: cursive;
+
 }
