@@ -12,43 +12,66 @@
 </head>
 
 <body>
-    <div>
-        <h2>welcome to Toe-Tac-Tic game !!!</h2>
-        <div class="usersname">
-            <button type="button">lets pley</button>
-        <input type="text" id="p1"  placeholder="user 1" required>
-        <input type="text" id="p1"  placeholder="user 2" required>
-    </div>
-    </div>
+
+    <nav>
+        <h1>welcome</h1>
+        <h1>to Toe-Tac-Tic game !!!</h1>
+        <div class="icons2">
+            <div class="icons" onclick="newGame()">
+                <input class="input" id="newGAME" type="button" value="New Game" class="button">
+                <i class="fas fa-sync"></i>
+            </div>
+
+            <div class="icons" onclick="stepBack()">
+                <input class="input" type="button" value="Last Step" class="button">
+                <i class="fas fa-backspace"></i> </div>
+
+            <div class="icons" onclick=" ShowRecord()">
+                <input class="input" type="button" value="Best Record" class="button">
+                <i class="fas fa-crown"></i>
+            </div>
+
+            <div class="icons" onclick=" UpdateLS()">
+                <input class="input" type="button" value="Save Game" class="button">
+                <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+
+            <div class="icons" onclick=" loudLS()">
+                <input class="input" type="button" value="Loud Game" class="button">
+                <i class="fas fa-cloud-download-alt"></i>
+            </div>
+        </div>
+        <form action="">
+            <input class="username" type="text" id="p1" placeholder="UserName1" required>
+            <input class="username" type="text" id="p2" placeholder="UserName2" required>
+            <div  onclick="submit()">
+            <button  id="playbtm" class="username" type="button" >
+                lets play<i class="fas fa-play-circle" id="iconPlay"></i>
+            </button> 
+            </div>
+        </form>
+    </nav>
     <div class="flex">
         <div class="gameover"></div>
-        
+
         <div id="table">
             <div class="row">
                 <div id="c0" class="box"></div>
-                <div id="c1"class="box"></div>
-                <div id="c2"class="box"></div>
+                <div id="c1" class="box"></div>
+                <div id="c2" class="box"></div>
             </div>
             <div class="row">
-                <div id="c3"class="box"></div>
-                <div id="c4"class="box"></div>
-                <div id="c5"class="box"></div>
+                <div id="c3" class="box"></div>
+                <div id="c4" class="box"></div>
+                <div id="c5" class="box"></div>
             </div>
             <div class="row">
-                <div id="c6"class="box"></div>
-                <div id="c7"class="box"></div>
-                <div id="c8"class="box"></div>
+                <div id="c6" class="box"></div>
+                <div id="c7" class="box"></div>
+                <div id="c8" class="box"></div>
             </div>
-        
-    </div>
-        <div id="input">
-            <input type="button" value="new game" onclick="newGame()" class="button">
-            <input type="button" value="מחק צעד אחרון" onclick="stepBack()" class="button">
-            <input type="button" value="הצג שיא"  onclick=" ShowRecord()" class="button">
-            <input type="button" value="שמור משחק"  onclick=" UpdateLS()" class="button">
-            <input type="button" value="טען משחק" onclick=" loudLS()" class="button">
-        </div>
 
+        </div>
     </div>
     <script src="confetti.js"></script>
     <script src="script.js"></script>
